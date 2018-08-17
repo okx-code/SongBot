@@ -37,7 +37,6 @@ public class SongBot {
 
     jda.addEventListener(new SubmitListener(config));
     jda.addEventListener(new SubmissionsListener(config));
-
   }
 
   private static Logger getLogger() {
