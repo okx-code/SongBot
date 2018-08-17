@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '2.0.4'
+}
+
+group 'sh.okx'
+version '1.0-SNAPSHOT'
+
+mainClassName = 'sh.okx.songbot.SongBot'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'net.dv8tion:JDA:3.7.+'
+    compile 'com.google.apis:google-api-services-youtube:v3-rev205-1.24.1'
+}
+
+shadowJar {
+    classifier = null
+}
