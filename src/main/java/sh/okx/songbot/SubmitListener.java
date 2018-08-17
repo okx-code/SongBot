@@ -126,7 +126,7 @@ public class SubmitListener extends ListenerAdapter {
       // go through the submissions we posted only
       if (message.isWebhookMessage()
           || selfId != submission.getAuthor().getIdLong()) {
-        return;
+        continue;
       }
 
       MessageEmbed embed = submission.getEmbeds().get(0);
