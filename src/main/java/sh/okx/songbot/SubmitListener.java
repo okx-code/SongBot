@@ -89,7 +89,6 @@ public class SubmitListener extends ListenerAdapter {
     MessageEmbed embed = highestMessage.getEmbeds().get(0);
 
     announcements.sendMessage(new EmbedBuilder(embed)
-        .setTitle(embed.getTitle())
         .setFooter("Winner of song competition", null)
         .build()).queue();
     message.getChannel().sendMessage(announcementSuccess).queue();
